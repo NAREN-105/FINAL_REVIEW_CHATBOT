@@ -245,19 +245,14 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 **NARENDARAN.M**
 
-📧 Email: your.email@example.com  
-🔗 GitHub: [github.com/yourusername](https://github.com/yourusername)  
-🌐 Repository: [advanced-ai-chatbot](https://github.com/yourusername/advanced-ai-chatbot)
-
+📧 Email: narenrdkn@gmail.com  
 ---
 
 ## 🙏 Acknowledgments
 
 - **Infosys Springboard** - Internship opportunity
-- **Mentors:** Jothiragavan T and Deepak B
 - **Python Community** - Documentation and libraries
 - **Open Source Contributors** - PyPDF2 and python-pptx
-
 ---
 
 ## 📊 Statistics
