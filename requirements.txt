@@ -1,0 +1,6 @@
+REQUIREMENTS:
+
+PyPDF2
+python-pptx
+
+
