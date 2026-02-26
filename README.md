@@ -281,5 +281,3 @@ If you find this project helpful, please consider:
 **Status:** Active
 
 ---
-
-*Built with ❤️ using Python and Pure Algorithmic Intelligence*
