@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Overview
+##  Overview
 
 An intelligent document analysis chatbot that enables users to upload documents (PDF, PowerPoint, Text) and ask natural language questions to receive instant, context-aware answers. Built using **pure algorithmic NLP** without machine learning dependencies.
 
@@ -22,7 +22,7 @@ An intelligent document analysis chatbot that enables users to upload documents 
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Installation
 
@@ -44,7 +44,7 @@ python newchatbot2.py
 
 ### Basic Usage
 
-1. Click **"📁 Upload File"** and select a PDF, PPTX, or TXT file
+1. Click **" Upload File"** and select a PDF, PPTX, or TXT file
 2. Wait for automatic document summarization
 3. Type your question in the input box
 4. Press **Enter** or click **"Send ➤"**
@@ -52,7 +52,7 @@ python newchatbot2.py
 
 ---
 
-## 💻 System Requirements
+##  System Requirements
 
 - **Python:** 3.8 or higher
 - **OS:** Windows, macOS, or Linux
@@ -61,7 +61,7 @@ python newchatbot2.py
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 ### Required (Built-in):
 - tkinter - GUI framework
@@ -78,7 +78,7 @@ python newchatbot2.py
 
 ---
 
-## 🎯 Features
+##  Features
 
 ### 1. Intelligent Question Classification
 - 7 question types with 91% accuracy
@@ -113,7 +113,7 @@ python newchatbot2.py
 
 ---
 
-## 📄 Supported File Formats
+##  Supported File Formats
 
 | Format | Extension | Features |
 |--------|-----------|----------|
@@ -123,7 +123,7 @@ python newchatbot2.py
 
 ---
 
-## 🔧 How It Works
+##  How It Works
 
 ### Architecture
 ```
@@ -145,7 +145,7 @@ Natural Language Processing → Human-like Response
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 ### Question Classification Accuracy
 - Definition: 95%
@@ -172,7 +172,7 @@ Natural Language Processing → Human-like Response
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Issue: "Module not found: tkinter"
 ```bash
@@ -200,7 +200,7 @@ pip install python-pptx
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 advanced-ai-chatbot/
@@ -216,7 +216,7 @@ advanced-ai-chatbot/
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - [ ] Multi-language support
 - [ ] Voice input/output
@@ -229,7 +229,7 @@ advanced-ai-chatbot/
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
@@ -241,21 +241,21 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ---
 
-## 👤 Author
+##  Author
 
 **NARENDARAN.M**
 
 📧 Email: narenrdkn@gmail.com  
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Infosys Springboard** - Internship opportunity
 - **Python Community** - Documentation and libraries
 - **Open Source Contributors** - PyPDF2 and python-pptx
 ---
 
-## 📊 Statistics
+##  Statistics
 
 - **Lines of Code:** ~1,200
 - **Classes:** 5 main components
