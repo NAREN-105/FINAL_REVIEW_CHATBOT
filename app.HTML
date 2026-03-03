@@ -330,7 +330,6 @@
             40% { transform: scale(1); }
         }
 
-        /* Scrollbar styling */
         .chat-container::-webkit-scrollbar,
         .chat-history::-webkit-scrollbar {
             width: 6px;
@@ -419,13 +418,13 @@
         let summaryVisible = false;
         let messageHistory = [];
 
-        // Auto-resize textarea
+
         function autoResize(textarea) {
             textarea.style.height = 'auto';
             textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
         }
 
-        // Handle file upload
+        
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -433,7 +432,7 @@
             const fileInfo = document.getElementById('fileInfo');
             fileInfo.textContent = `Uploaded: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
 
-            // Simulate file processing
+         
             const reader = new FileReader();
             reader.onload = function(e) {
                 if (file.type === 'text/plain') {
@@ -456,13 +455,13 @@
             }
         }
 
-        // Toggle manual input
+       
         function toggleManualInput() {
             const container = document.getElementById('manualInputContainer');
             container.style.display = container.style.display === 'none' ? 'block' : 'none';
         }
 
-        // Submit manual text
+       
         function submitManualText() {
             const textarea = document.getElementById('manualTextarea');
             const text = textarea.value.trim();
@@ -480,7 +479,7 @@
             }
         }
 
-        // Generate summary
+       
         function generateSummary() {
             if (uploadedContent) {
                 // Simple summary generation (in real app, use AI)
@@ -493,7 +492,6 @@
             }
         }
 
-        // Toggle summary display
         function toggleSummary() {
             const summarySection = document.getElementById('summarySection');
             const summaryBtn = document.getElementById('summaryBtn');
@@ -511,7 +509,6 @@
             }
         }
 
-        // Handle key press
         function handleKeyPress(event) {
             if (event.key === 'Enter' && !event.shiftKey) {
                 event.preventDefault();
@@ -519,7 +516,6 @@
             }
         }
 
-        // Send message
         function sendMessage() {
             const input = document.getElementById('messageInput');
             const message = input.value.trim();
@@ -530,10 +526,10 @@
             input.value = '';
             input.style.height = 'auto';
             
-            // Show loading
+           
             showLoading();
             
-            // Simulate AI response
+            
             setTimeout(() => {
                 hideLoading();
                 const response = generateResponse(message);
@@ -541,7 +537,6 @@
             }, 1000 + Math.random() * 2000);
         }
 
-        // Add message to chat
         function addMessage(sender, content) {
             const chatContainer = document.getElementById('chatContainer');
             const messageDiv = document.createElement('div');
@@ -564,7 +559,6 @@
             messageHistory.push({sender, content, timestamp: new Date()});
         }
 
-        // Show loading indicator
         function showLoading() {
             const chatContainer = document.getElementById('chatContainer');
             const loadingDiv = document.createElement('div');
@@ -586,7 +580,6 @@
             chatContainer.scrollTop = chatContainer.scrollHeight;
         }
 
-        // Hide loading indicator
         function hideLoading() {
             const loadingMessage = document.getElementById('loadingMessage');
             if (loadingMessage) {
@@ -594,13 +587,13 @@
             }
         }
 
-        // Generate AI response
+       
         function generateResponse(question) {
             if (!uploadedContent) {
                 return "Please upload a file or enter some text first so I can help answer questions about the content.";
             }
             
-            // Simple keyword-based responses (in real app, use proper AI)
+           
             const lowerQuestion = question.toLowerCase();
             
             if (lowerQuestion.includes('summary') || lowerQuestion.includes('summarize')) {
@@ -619,7 +612,7 @@
             return `Based on the content you provided, I can see it discusses various topics. Your question "${question}" is interesting. From what I can analyze in the text, here are some relevant points: ${uploadedContent.substring(0, 200)}... Would you like me to focus on any specific aspect?`;
         }
 
-        // Start new chat
+      
         function startNewChat() {
             document.getElementById('chatContainer').innerHTML = `
                 <div class="message bot">
