@@ -9,7 +9,7 @@ import math
 import random
 from collections import Counter, defaultdict
 
-# For file processing
+
 try:
     import PyPDF2
     PDF_AVAILABLE = True
@@ -33,7 +33,6 @@ class AdvancedNLG:
     """Advanced Natural Language Generator - Creates human-like responses"""
     
     def __init__(self):
-        # Enhanced synonym database
         self.synonyms = {
             'show': ['demonstrate', 'illustrate', 'reveal', 'indicate', 'display', 'exhibit'],
             'explain': ['describe', 'clarify', 'elucidate', 'elaborate', 'detail', 'outline'],
@@ -51,7 +50,7 @@ class AdvancedNLG:
             'include': ['contain', 'comprise', 'encompass', 'incorporate', 'feature'],
         }
         
-        # Conversational intros (more natural)
+      
         self.intros = [
             "Based on what I found in the document,",
             "From what I can gather,",
@@ -65,7 +64,7 @@ class AdvancedNLG:
             "The information indicates that",
         ]
         
-        # Natural transitions
+        
         self.transitions = {
             'addition': ['Also,', 'Additionally,', 'Furthermore,', 'Moreover,', 'Plus,', 'What\'s more,'],
             'elaboration': ['In fact,', 'Specifically,', 'More precisely,', 'To be exact,', 'In particular,'],
@@ -75,14 +74,14 @@ class AdvancedNLG:
             'emphasis': ['Indeed,', 'In fact,', 'Actually,', 'Importantly,', 'Notably,'],
         }
         
-        # Sentence starters for variety
+       
         self.sentence_starters = [
             "It's worth noting that", "Interestingly,", "What's important here is that",
             "I should mention that", "One key point is that", "It's clear that",
             "Essentially,", "In essence,", "Basically,", "Simply put,"
         ]
         
-        # Ending phrases for engagement
+    
         self.engagers = [
             "Does this help clarify things?",
             "Would you like me to elaborate on any part?",
@@ -97,11 +96,11 @@ class AdvancedNLG:
         if not sentences:
             return ""
         
-        # Start with an intro
+       
         result = [random.choice(self.intros) + " " + sentences[0]]
         
         for i in range(1, min(len(sentences), 4)):
-            # Add variety with transitions
+          
             if i == 1 and random.random() > 0.3:
                 trans_type = random.choice(['elaboration', 'addition'])
                 result.append(random.choice(self.transitions[trans_type]) + " " + sentences[i])
@@ -110,10 +109,10 @@ class AdvancedNLG:
             else:
                 result.append(sentences[i])
         
-        # Join naturally
+     
         paragraph = " ".join(result)
         
-        # Add engagement if appropriate
+        
         if style == 'helpful' and random.random() > 0.5:
             paragraph += "\n\n" + random.choice(self.engagers)
         
@@ -121,20 +120,20 @@ class AdvancedNLG:
     
     def paraphrase_intelligently(self, text):
         """Intelligent paraphrasing using multiple techniques"""
-        # Split into words
+        
         words = text.split()
         result = []
         
         for i, word in enumerate(words):
             word_clean = word.lower().strip('.,!?;:')
             
-            # Replace with synonym occasionally
+           
             if word_clean in self.synonyms and random.random() > 0.6:
                 synonym = random.choice(self.synonyms[word_clean])
-                # Preserve capitalization
+               
                 if word[0].isupper():
                     synonym = synonym.capitalize()
-                # Preserve punctuation
+               
                 if word[-1] in '.,!?;:':
                     synonym += word[-1]
                 result.append(synonym)
@@ -145,7 +144,7 @@ class AdvancedNLG:
     
     def restructure_for_naturalness(self, sentence):
         """Make sentences sound more conversational"""
-        # Remove overly formal patterns
+        
         sentence = re.sub(r'^The document states that', 'Basically,', sentence)
         sentence = re.sub(r'^It is important to note that', 'Keep in mind that', sentence)
         sentence = re.sub(r'^It should be noted that', 'Worth mentioning -', sentence)
@@ -198,7 +197,7 @@ class ContextualUnderstanding:
         """Deep analysis of question intent"""
         question_lower = question.lower()
         
-        # Detect question type
+       
         q_type = 'general'
         intent = 'seeking_information'
         
@@ -209,10 +208,10 @@ class ContextualUnderstanding:
                     intent = data['intent']
                     break
         
-        # Extract key concepts (not just keywords)
+       
         concepts = self.extract_concepts(question)
         
-        # Determine complexity
+       
         complexity = 'simple' if len(question.split()) < 8 else 'complex'
         
         return {
@@ -228,7 +227,7 @@ class ContextualUnderstanding:
         words = re.findall(r'\b[a-z]{3,}\b', text.lower())
         concepts = [w for w in words if w not in self.stop_words]
         
-        # Find phrases (2-3 word combinations)
+       
         words_list = text.lower().split()
         phrases = []
         for i in range(len(words_list) - 1):
@@ -252,21 +251,21 @@ class SemanticMatcher:
         score = 0
         matches = []
         
-        # Check keywords
+        
         for keyword in query_concepts['keywords']:
             if keyword in sentence_lower:
                 score += 2
                 matches.append(keyword)
-                # Bonus for multiple occurrences
+               
                 score += sentence_lower.count(keyword) * 0.5
         
-        # Check phrases (worth more)
+        
         for phrase in query_concepts['phrases']:
             if phrase in sentence_lower:
                 score += 5
                 matches.append(phrase)
         
-        # Length consideration (not too short, not too long)
+      
         word_count = len(sentence.split())
         if 10 < word_count < 50:
             score += 1
@@ -282,25 +281,25 @@ class SemanticMatcher:
         analysis = self.context_understanding.analyze_question(question)
         concepts = analysis['concepts']
         
-        # Split content into sentences
+     
         sentences = [s.strip() for s in re.split(r'[.!?]+', content) if len(s.strip()) > 15]
         
         if not sentences:
             return []
         
-        # Score each sentence
+        
         scored = []
         for i, sent in enumerate(sentences):
             result = self.compute_semantic_score(concepts, sent)
-            # Add position bonus for first 20 sentences
+            
             if i < 20:
                 result['score'] += (20 - i) * 0.1
             scored.append(result)
         
-        # Sort by score
+      
         scored.sort(key=lambda x: x['score'], reverse=True)
         
-        # Filter out low scores and return top N
+       
         relevant = [s for s in scored if s['score'] > 0]
         return relevant[:top_n], analysis
 
@@ -317,13 +316,13 @@ class AdvancedResponseEngine:
         if not content or len(content.strip()) < 20:
             return "I don't have enough content to answer that question. Could you upload or enter some text first?"
         
-        # Find relevant content
+        
         relevant_sentences, analysis = self.matcher.find_relevant_content(question, content)
         
         if not relevant_sentences or relevant_sentences[0]['score'] < 1:
             return self.generate_no_match_response(question, analysis)
         
-        # Generate response based on question type
+        
         if analysis['type'] == 'definition':
             response = self.generate_definition_response(relevant_sentences, analysis)
         elif analysis['type'] == 'explanation':
@@ -339,7 +338,7 @@ class AdvancedResponseEngine:
         else:
             response = self.generate_general_response(relevant_sentences, analysis)
         
-        # Store in conversation memory
+      
         self.conversation_memory.append({
             'question': question,
             'response': response,
@@ -361,12 +360,12 @@ class AdvancedResponseEngine:
         
         response = f"{random.choice(intros)} {main_sentence}"
         
-        # Add supporting detail
+       
         if len(sentences) > 1 and sentences[1]['score'] > 2:
             support = self.nlg.paraphrase_intelligently(sentences[1]['text'])
             response += f" {random.choice(self.nlg.transitions['elaboration'])} {support}"
         
-        # Add engagement
+      
         if random.random() > 0.5:
             response += "\n\n" + random.choice(self.nlg.engagers)
         
@@ -381,7 +380,7 @@ class AdvancedResponseEngine:
             "From what the document explains,",
         ]
         
-        # Use top 3 sentences
+    
         top_sentences = [self.nlg.paraphrase_intelligently(s['text']) for s in sentences[:3]]
         
         response = f"{random.choice(intros)} {top_sentences[0]}"
@@ -400,11 +399,11 @@ class AdvancedResponseEngine:
         """Generate step-by-step response"""
         response = "Here's the process I found in the document:\n\n"
         
-        # Look for numbered steps or sequential info
+       
         steps = []
         for s in sentences[:5]:
             text = s['text']
-            # Check if it's a step
+          
             if re.search(r'\bfirst\b|\bsecond\b|\bstep\b|\bthen\b|\bnext\b', text.lower()):
                 steps.append(self.nlg.paraphrase_intelligently(text))
         
@@ -412,7 +411,7 @@ class AdvancedResponseEngine:
             for i, step in enumerate(steps, 1):
                 response += f"{i}. {step}\n\n"
         else:
-            # Create a flowing explanation instead
+          
             response = "Let me walk you through this:\n\n"
             for s in sentences[:3]:
                 response += f"• {self.nlg.paraphrase_intelligently(s['text'])}\n\n"
@@ -428,7 +427,7 @@ class AdvancedResponseEngine:
         items = []
         for s in sentences[:5]:
             text = s['text']
-            # Look for list indicators
+           
             if ',' in text or 'include' in text.lower():
                 items.append(self.nlg.paraphrase_intelligently(text))
         
@@ -444,10 +443,10 @@ class AdvancedResponseEngine:
     
     def generate_yes_no_response(self, sentences, analysis):
         """Generate yes/no response with explanation"""
-        # Determine yes or no based on content
+     
         top_sentence = sentences[0]['text'].lower()
         
-        # Look for affirmative or negative indicators
+      
         positive_words = ['yes', 'correct', 'true', 'indeed', 'certainly', 'does', 'is', 'can', 'will']
         negative_words = ['no', 'not', 'never', 'cannot', 'won\'t', 'doesn\'t', 'isn\'t']
         
@@ -465,7 +464,7 @@ class AdvancedResponseEngine:
         
         response = f"{answer}, {main_text}"
         
-        # Add supporting evidence
+        
         if len(sentences) > 1:
             support = self.nlg.paraphrase_intelligently(sentences[1]['text'])
             response += f" {random.choice(self.nlg.transitions['elaboration'])} {support}"
@@ -474,7 +473,7 @@ class AdvancedResponseEngine:
     
     def generate_general_response(self, sentences, analysis):
         """Generate general informative response"""
-        # Use the NLG to create a natural paragraph
+       
         sentence_texts = [s['text'] for s in sentences[:3]]
         paraphrased = [self.nlg.paraphrase_intelligently(s) for s in sentence_texts]
         
@@ -486,14 +485,14 @@ class AdvancedResponseEngine:
         """Generate comparison response"""
         response = "Let me compare these for you:\n\n"
         
-        # Try to find contrasting information
+       
         for s in sentences[:4]:
             text = s['text']
             if 'differ' in text.lower() or 'while' in text.lower() or 'whereas' in text.lower():
                 response += f"{self.nlg.paraphrase_intelligently(text)}\n\n"
         
         if response == "Let me compare these for you:\n\n":
-            # No explicit comparison found, provide available info
+           
             response = "Here's what I found about this:\n\n"
             for s in sentences[:3]:
                 response += f"• {self.nlg.paraphrase_intelligently(s['text'])}\n\n"
@@ -581,7 +580,7 @@ class PPTContentGenerator:
         
         slides = []
         
-        # Slide 1: Title Slide
+        
         title = self.create_title_from_content(content_text)
         slides.append({
             'type': 'title',
@@ -589,7 +588,7 @@ class PPTContentGenerator:
             'subtitle': f'Generated from document content\n{datetime.now().strftime("%B %d, %Y")}'
         })
         
-        # Slide 2: Introduction/Overview
+       
         intro_sentences = self.extract_key_points(content_text[:1000], num_points=4)
         slides.append({
             'type': 'content',
@@ -597,7 +596,7 @@ class PPTContentGenerator:
             'bullets': intro_sentences
         })
         
-        # Slide 3-7: Topic slides
+        
         topics = self.extract_topics(content_text)
         
         for topic in topics[:5]:
@@ -613,7 +612,7 @@ class PPTContentGenerator:
                 'bullets': bullets
             })
         
-        # Slide: Key Takeaways
+       
         all_sentences = [s.strip() for s in re.split(r'[.!?]+', content_text) if len(s.strip()) > 30]
         key_takeaways = []
         
@@ -632,7 +631,7 @@ class PPTContentGenerator:
             'bullets': key_takeaways[:4]
         })
         
-        # Final Slide: Conclusion
+        
         slides.append({
             'type': 'conclusion',
             'title': 'Thank You',
