@@ -1,6 +1,6 @@
-REQUIREMENTS:
+# REQUIREMENTS:
 
-PyPDF2
-python-pptx
+**PyPDF2**
+***python-pptx***
 
 
