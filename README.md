@@ -4,14 +4,13 @@
 **Author:** NARENDARAN.M  
 **License:** MIT  
 **Python Version:** 3.8+
-
 ---
 
 ##  Overview
-
 An intelligent document analysis chatbot that enables users to upload documents (PDF, PowerPoint, Text) and ask natural language questions to receive instant, context-aware answers. Built using **pure algorithmic NLP** without machine learning dependencies.
 
 ### Key Features
+
 - ✅ **No ML Dependencies** - Works without TensorFlow, PyTorch, or cloud APIs
 - ✅ **7 Question Types** - Definition, Explanation, Procedure, Comparison, Listing, Yes/No, Examples
 - ✅ **Fast Responses** - Sub-2-second response generation
@@ -19,13 +18,10 @@ An intelligent document analysis chatbot that enables users to upload documents 
 - ✅ **Auto-PPT Generation** - Creates 7-9 slide presentations
 - ✅ **Multi-Session Management** - Handle multiple conversations
 - ✅ **Fully Offline** - No internet required
-
 ---
 
 ##  Quick Start
-
 ### Installation
-
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/yourusername/advanced-ai-chatbot.git
@@ -79,7 +75,6 @@ python newchatbot2.py
 ---
 
 ##  Features
-
 ### 1. Intelligent Question Classification
 - 7 question types with 91% accuracy
 - Pattern-based classification
