@@ -164,11 +164,9 @@ Natural Language Processing → Human-like Response
 - Relevance: 4.5/5.0
 - Completeness: 4.3/5.0
 - Paraphrasing: 4.4/5.0
-
 ---
 
 ##  Troubleshooting
-
 ### Issue: "Module not found: tkinter"
 ```bash
 # Ubuntu/Debian
@@ -268,7 +266,6 @@ If you find this project helpful, please consider:
 - Starring the repository ⭐
 - Sharing with others 📢
 - Contributing improvements 🤝
-
 ---
 
 **Last Updated:** January 2025  
