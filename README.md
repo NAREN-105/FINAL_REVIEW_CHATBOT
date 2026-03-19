@@ -235,10 +235,10 @@ advanced-ai-chatbot/
 
 ---
 
+
 ##  License
-
-
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+
 
 
 **MIT License Summary:**
@@ -250,24 +250,24 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 ---
 
 
-##  Author
 
+##  Author
 
 **NARENDARAN.M**
 📧 Email: narenrdkn@gmail.com  
 ---
 
 
-##  Acknowledgments
 
+##  Acknowledgments
 - **Infosys Springboard** - Internship opportunity
 - **Python Community** - Documentation and libraries
 - **Open Source Contributors** - PyPDF2 and python-pptx
 ---
 
 
-##  Statistics
 
+##  Statistics
 - **Lines of Code:** ~1,200
 - **Classes:** 5 main components
 - **Functions:** 50+
@@ -279,12 +279,12 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 
 ## ⭐ Support
-
 If you find this project helpful, please consider:
 - Starring the repository ⭐
 - Sharing with others 📢
 - Contributing improvements 🤝
 ---
+
 
 **Last Updated:** January 2025  
 **Version:** 1.0  
