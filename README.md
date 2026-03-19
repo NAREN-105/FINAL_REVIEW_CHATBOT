@@ -118,7 +118,9 @@ python newchatbot2.py
 
 ---
 
+
 ##  How It Works
+
 
 ### Architecture
 ```
@@ -131,6 +133,7 @@ Top-5 Sentence Selection → Response Generation
 Natural Language Processing → Human-like Response
 ```
 
+
 ### Core Components
 1. **AdvancedNLG** - Natural language generation with synonym replacement
 2. **ContextualUnderstanding** - Question classification and concept extraction
@@ -140,7 +143,9 @@ Natural Language Processing → Human-like Response
 
 ---
 
+
 ##  Performance Metrics
+
 
 ### Question Classification Accuracy
 - Definition: 95%
@@ -151,7 +156,9 @@ Natural Language Processing → Human-like Response
 - Yes/No: 94%
 - Examples: 87%
 
+
 **Overall:** 91% accuracy
+
 
 ### Response Times
 - Question Analysis: <0.1s
@@ -159,12 +166,15 @@ Natural Language Processing → Human-like Response
 - Response Generation: 0.3-0.5s
 - **Total:** 0.5-2 seconds
 
+
 ### Quality Scores
 - Naturalness: 4.2/5.0
 - Relevance: 4.5/5.0
 - Completeness: 4.3/5.0
 - Paraphrasing: 4.4/5.0
 ---
+
+
 
 ##  Troubleshooting
 ### Issue: "Module not found: tkinter"
@@ -176,15 +186,18 @@ sudo apt-get install python3-tk
 brew install python-tk
 ```
 
+
 ### Issue: "Cannot import PyPDF2"
 ```bash
 pip install PyPDF2
 ```
 
+
 ### Issue: PPT generation not working
 ```bash
 pip install python-pptx
 ```
+
 
 ### Issue: Slow response times
 - Use shorter documents (<50,000 characters)
@@ -193,8 +206,8 @@ pip install python-pptx
 
 ---
 
-##  Project Structure
 
+##  Project Structure
 ```
 advanced-ai-chatbot/
 ├── newchatbot2.py              # Main application
@@ -208,6 +221,7 @@ advanced-ai-chatbot/
 ```
 
 ---
+
 
 ##  Future Enhancements
 
@@ -224,7 +238,9 @@ advanced-ai-chatbot/
 
 ##  License
 
+
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+
 
 **MIT License Summary:**
 - ✅ Commercial use
@@ -234,12 +250,14 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ---
 
+
 ##  Author
 
-**NARENDARAN.M**
 
+**NARENDARAN.M**
 📧 Email: narenrdkn@gmail.com  
 ---
+
 
 ##  Acknowledgments
 
@@ -247,6 +265,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - **Python Community** - Documentation and libraries
 - **Open Source Contributors** - PyPDF2 and python-pptx
 ---
+
 
 ##  Statistics
 
@@ -257,8 +276,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - **Synonym Categories:** 14 categories
 - **Development Time:** 8 weeks
 - **Test Coverage:** 90%+
-
 ---
+
 
 ## ⭐ Support
 
@@ -271,5 +290,4 @@ If you find this project helpful, please consider:
 **Last Updated:** January 2025  
 **Version:** 1.0  
 **Status:** Active
-
 ---
