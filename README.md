@@ -146,8 +146,6 @@ Natural Language Processing → Human-like Response
 ---
 
 ##  Performance Metrics
-
-
 ### Question Classification Accuracy
 - Definition: 95%
 - Explanation: 92%
