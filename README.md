@@ -266,7 +266,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 ---
 
 
-
 ##  Statistics
 - **Lines of Code:** ~1,200
 - **Classes:** 5 main components
@@ -288,4 +287,4 @@ If you find this project helpful, please consider:
 **Last Updated:** January 2025  
 **Version:** 1.0  
 **Status:** Active
----=
+---
