@@ -21,6 +21,7 @@ An intelligent document analysis chatbot that enables users to upload documents 
 - ✅ **Fully Offline** - No internet required
 ---
 
+
 ##  Quick Start
 ### Installation
 1. **Clone the repository:**
