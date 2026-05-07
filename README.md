@@ -265,7 +265,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - **Open Source Contributors** - PyPDF2 and python-pptx
 ---
 
-
 ##  Statistics
 - **Lines of Code:** ~1,200
 - **Classes:** 5 main components
