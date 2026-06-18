@@ -7,6 +7,7 @@
 **Python Version:** 3.8+
 ---
 
+
 ##  Overview
 An intelligent document analysis chatbot that enables users to upload documents (PDF, PowerPoint, Text) and ask natural language questions to receive instant, context-aware answers. Built using **pure algorithmic NLP** without machine learning dependencies.
 
