@@ -13,6 +13,7 @@ An intelligent document analysis chatbot that enables users to upload documents 
 
 ### Key Features
 
+
 - ✅ **No ML Dependencies** - Works without TensorFlow, PyTorch, or cloud APIs
 - ✅ **7 Question Types** - Definition, Explanation, Procedure, Comparison, Listing, Yes/No, Examples
 - ✅ **Fast Responses** - Sub-2-second response generation
